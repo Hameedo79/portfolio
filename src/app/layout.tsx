@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 const title = `${profile.name} — ${profile.title}`;
 const description = `Portfolio of ${profile.name}, a ${profile.title} building full-stack products across mobile, web, and backend.`;
 
