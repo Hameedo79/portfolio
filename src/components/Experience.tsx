@@ -17,18 +17,30 @@ export function Experience() {
             <div className="grid gap-2 sm:grid-cols-[1fr_2fr] sm:gap-8">
               <div>
                 <p className="font-semibold text-foreground">{job.role}</p>
-                {job.link ? (
-                  <a
-                    href={job.link}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-sm text-accent underline-offset-4 transition-colors hover:text-foreground hover:underline"
-                  >
-                    {job.company}
-                  </a>
-                ) : (
-                  <p className="text-sm text-accent">{job.company}</p>
-                )}
+                <p className="text-sm text-accent">
+                  {job.company}{" "}
+                  {job.link && (
+                    <a
+                      href={job.link}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={`Open ${job.company}`}
+                      className="inline-block align-middle text-foreground-muted transition-colors hover:text-accent"
+                    >
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="h-3.5 w-3.5"
+                      >
+                        <path d="M7 17 17 7M8 7h9v9" />
+                      </svg>
+                    </a>
+                  )}
+                </p>
                 <p className="mt-1 font-mono text-xs text-foreground-muted">
                   {job.period}
                 </p>

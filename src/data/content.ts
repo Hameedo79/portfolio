@@ -364,7 +364,6 @@ export const projects: Project[] = [
     name: "VGAS",
     description:
       "Internal workflow tool for producing Business Information Reports — tracks an investigation of a buyer's company, ownership, and financials (with translation and QC steps) through to a final report exportable as DOCX, PDF, or JSON for the client's decision-making.",
-    link: "https://www.id.crifasia.com/who-we-are/crif-in-indonesia/",
     tags: [
       "AngularJS",
       "jQuery",
@@ -381,7 +380,6 @@ export const projects: Project[] = [
     name: "Cuti Online",
     description:
       "Internal HR system for employee time and leave management, used across the company's Indonesia, Philippines, Singapore, Vietnam, and Malaysia offices — clock in/out, submit leave requests (annual, maternity, etc.), and route them through manager/HR approval, with HR reporting tools.",
-    link: "https://www.id.crifasia.com/who-we-are/crif-in-indonesia/",
     tags: [
       "jQuery",
       "Bootstrap",
@@ -396,7 +394,6 @@ export const projects: Project[] = [
     name: "VAMS",
     description:
       "Asset management system — tracks company assets (e.g. laptops) and their assigned owner, generates QR codes per item for quick stock-opname scanning, and handles item requests and repair requests, with reporting.",
-    link: "https://www.id.crifasia.com/who-we-are/crif-in-indonesia/",
     tags: [
       "React",
       "TypeScript",
