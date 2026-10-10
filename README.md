@@ -113,6 +113,21 @@ Drop a file named `profile-photo.<jpg|jpeg|png|webp|avif>` into `public/`.
 `ProfilePhoto.tsx` tries each extension in order and simply hides itself (no
 border, no layout gap) if none exist — no code changes needed either way.
 
+## Testing
+
+A small Playwright suite under `e2e/` covers the interactive bits that a
+build/typecheck alone wouldn't catch: nav scrolling, the mobile menu, the
+theme toggle (and its persistence), and the project gallery lightbox.
+
+```bash
+npm run test:e2e
+```
+
+This builds the app and runs it locally before testing against it (see
+`playwright.config.ts`). It also runs automatically in CI
+(`.github/workflows/playwright.yml`) on every push/PR targeting `develop`,
+and is a required status check on that branch.
+
 ## Scripts reference
 
 | Script                  | Purpose                                       |
@@ -126,6 +141,7 @@ border, no layout gap) if none exist — no code changes needed either way.
 | `npm run lint:fix`      | ESLint with autofix                           |
 | `npm run typecheck`     | TypeScript check with no output               |
 | `npm run clean`         | Remove `.next` (fixes stale dev-cache issues) |
+| `npm run test:e2e`      | Run the Playwright end-to-end smoke tests     |
 
 Before pushing/deploying, it's worth running all three checks:
 

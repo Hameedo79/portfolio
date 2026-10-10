@@ -13,6 +13,8 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 - Package manager: npm only (no yarn/pnpm/bun). Don't add other lockfiles.
 - Before considering any change done, run:
   `npm run typecheck && npm run lint && npm run build`
+  If the change touches interactive behavior (nav, theme toggle, project
+  gallery, etc.), also run `npm run test:e2e`.
 - All page content (profile, skills, experience, education, projects) lives in
   `src/data/content.ts`. Prefer editing that file over hardcoding text in
   components.
@@ -45,3 +47,14 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
   tags), never a secret. `.env.local`/`.env.production` are auto-loaded by
   Next; `.env.sandbox` is not — only the `dev:sandbox`/`build:sandbox` scripts
   load it explicitly.
+- E2E tests live in `e2e/*.spec.ts` (Playwright). `playwright.config.ts` uses
+  the `line` reporter locally and `html` only in CI (`process.env.CI`) —
+  don't force `html` as the default, it starts a blocking local report server
+  after the run finishes. CI runs these on every push/PR to `develop` via
+  `.github/workflows/playwright.yml` and it's a required status check on that
+  branch.
+- When testing locally in a terminal, double check `pwd` first — this
+  workspace sits alongside other unrelated repos (e.g. a `Slyp` folder with
+  its own private npm registry config), and running npm commands from the
+  wrong directory fails with a confusing registry auth error rather than a
+  clear "wrong folder" message.
