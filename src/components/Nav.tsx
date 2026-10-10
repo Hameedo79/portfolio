@@ -78,7 +78,18 @@ export function Nav() {
             <li key={s.href}>
               <a
                 href={s.href}
-                onClick={() => setOpen(false)}
+                onClick={(e) => {
+                  e.preventDefault();
+                  setOpen(false);
+                  // Wait for the mobile menu's collapse transition (duration-300)
+                  // to finish before scrolling, so the layout height is final.
+                  window.setTimeout(() => {
+                    document
+                      .querySelector(s.href)
+                      ?.scrollIntoView({ behavior: "smooth" });
+                    history.pushState(null, "", s.href);
+                  }, 300);
+                }}
                 className="block py-2 transition-colors hover:text-accent"
               >
                 <span className="mr-1 text-accent">
