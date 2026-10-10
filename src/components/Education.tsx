@@ -18,15 +18,15 @@ export function Education() {
             >
               <div>
                 <p className="font-semibold text-foreground">{item.degree}</p>
-                <p className="flex items-center gap-1.5 text-sm text-accent">
-                  {item.institution}
+                <p className="text-sm text-accent">
+                  {item.institution}{" "}
                   {item.link && (
                     <a
                       href={item.link}
                       target="_blank"
                       rel="noreferrer"
                       aria-label={`Open ${item.institution}`}
-                      className="text-foreground-muted transition-colors hover:text-accent"
+                      className="inline-block align-middle text-foreground-muted transition-colors hover:text-accent"
                     >
                       <svg
                         viewBox="0 0 24 24"

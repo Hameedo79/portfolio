@@ -17,15 +17,15 @@ export function Experience() {
             <div className="grid gap-2 sm:grid-cols-[1fr_2fr] sm:gap-8">
               <div>
                 <p className="font-semibold text-foreground">{job.role}</p>
-                <p className="flex items-center gap-1.5 text-sm text-accent">
-                  {job.company}
+                <p className="text-sm text-accent">
+                  {job.company}{" "}
                   {job.link && (
                     <a
                       href={job.link}
                       target="_blank"
                       rel="noreferrer"
                       aria-label={`Open ${job.company}`}
-                      className="text-foreground-muted transition-colors hover:text-accent"
+                      className="inline-block align-middle text-foreground-muted transition-colors hover:text-accent"
                     >
                       <svg
                         viewBox="0 0 24 24"
