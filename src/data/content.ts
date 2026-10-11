@@ -79,7 +79,7 @@ export const experience: Experience[] = [
   {
     role: "Software Engineering Manager",
     company: "The Luxe Week — Bali, Indonesia",
-    period: "Jul 2023 - Jul 2024",
+    period: "Jul 2023 - Oct 2024",
     link: "https://www.theluxeweek.com/",
     highlights: [
       "Led and managed a team of software engineers to successfully deliver and launch a new software product on time and within budget.",
