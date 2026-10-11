@@ -66,7 +66,7 @@ export const experience: Experience[] = [
   {
     role: "Senior Software Engineer",
     company: "Slyp Pty Ltd — Sydney, Australia",
-    period: "Sep 2024 - Present",
+    period: "Nov 2024 - Present",
     link: "https://www.slyp.com.au/",
     highlights: [
       "Design, build, and maintain full-stack features across a loyalty/rewards platform spanning a React Native mobile app, a React web app, and multiple Node.js/TypeScript backend microservices.",
