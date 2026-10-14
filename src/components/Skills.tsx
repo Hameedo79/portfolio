@@ -8,9 +8,9 @@ export function Skills() {
       <div className="mx-auto max-w-5xl px-6 py-16">
         <Reveal>
           <SectionHeading index="02" title="Skills" />
-          <div className="grid gap-8 sm:grid-cols-2">
+          <div className="columns-1 gap-8 sm:columns-2">
             {Object.entries(skills).map(([category, items]) => (
-              <div key={category}>
+              <div key={category} className="mb-8 break-inside-avoid">
                 <h3 className="mb-3 font-mono text-sm font-semibold text-foreground">
                   {category}
                 </h3>
