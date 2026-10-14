@@ -18,6 +18,11 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 - All page content (profile, skills, experience, education, projects) lives in
   `src/data/content.ts`. Prefer editing that file over hardcoding text in
   components.
+- `skills` in `content.ts` is computed by `buildSkills()`, not hand-written —
+  it merges `tagSkillCategories` (maps each project tag to a skills category)
+  with `additionalSkills` (curated ordering + skills not tied to any project).
+  Add new project tags to `tagSkillCategories` so they surface automatically;
+  don't edit the exported `skills` object directly.
 - Project screenshots go in `public/projects/<slug>/`, referenced via the
   `images: string[]` field on a project in `content.ts`. Rendered by
   `ProjectGallery.tsx` (carousel + click-to-zoom lightbox).

@@ -43,6 +43,11 @@ export function Experience() {
                 </p>
                 <p className="mt-1 font-mono text-xs text-foreground-muted">
                   {job.period}
+                  {job.remote && (
+                    <span className="ml-2 rounded-full border border-accent/30 px-2 py-0.5 text-[10px] font-sans uppercase tracking-wide text-accent">
+                      Remote
+                    </span>
+                  )}
                 </p>
               </div>
               <ul className="space-y-2 text-sm text-foreground-muted">

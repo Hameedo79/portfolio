@@ -15,51 +15,13 @@ export const profile = {
     "Senior Software Engineer with 8+ years of experience building full-stack products across mobile (React Native), web (React), and backend (Node.js/TypeScript) platforms. Skilled in owning features end-to-end, from design through implementation, testing, and production deployment, in cloud-based (AWS) environments, with a strong focus on code quality and clear cross-functional communication.",
 };
 
-export const skills = {
-  "Programming Languages": [
-    "TypeScript",
-    "JavaScript",
-    "HTML/CSS",
-    "PHP",
-    "Dart",
-  ],
-  "Frameworks & Runtimes": [
-    "React",
-    "React Native",
-    "Next.js",
-    "Node.js",
-    "Express",
-    "NestJS",
-    "CodeIgniter",
-  ],
-  Databases: ["MySQL", "PostgreSQL", "SQL Server", "MongoDB", "TypeORM"],
-  "Cloud & DevOps": [
-    "AWS (Cognito, S3, SQS, WAF)",
-    "Amazon QuickSight",
-    "Docker",
-    "Kubernetes",
-    "Terraform",
-    "GitHub Actions CI/CD",
-  ],
-  Testing: ["Jest", "React Testing Library", "Playwright"],
-  "Tools & Practices": [
-    "GraphQL",
-    "Apollo GraphQL",
-    "REST API",
-    "Third-party API Integrations (EagleEye, Gr4vy, Paragon)",
-    "PostHog Analytics",
-    "Figma",
-    "Jira",
-    "AI-assisted development",
-  ],
-};
-
 export type Experience = {
   role: string;
   company: string;
   period: string;
   highlights: string[];
   link?: string;
+  remote?: boolean;
 };
 
 export const experience: Experience[] = [
@@ -68,6 +30,7 @@ export const experience: Experience[] = [
     company: "Slyp Pty Ltd — Sydney, Australia",
     period: "Nov 2024 - Present",
     link: "https://www.slyp.com.au/",
+    remote: true,
     highlights: [
       "Design, build, and maintain full-stack features across a loyalty/rewards platform spanning a React Native mobile app, a React web app, and multiple Node.js/TypeScript backend microservices.",
       "Build and evolve authentication and session-management flows (AWS Cognito, JWT issuance/refresh), balancing security with user experience.",
@@ -94,6 +57,7 @@ export const experience: Experience[] = [
     company: "Juleb - Digital Pharma Company — Jeddah, Saudi Arabia",
     period: "May 2022 - May 2023",
     link: "https://juleb.com/",
+    remote: true,
     highlights: [
       "Built a React/Node.js web application, optimizing performance by reducing page load times.",
       "Developed a back-end API using Node.js and the NestJS framework.",
@@ -191,6 +155,8 @@ export const projects: Project[] = [
       "/projects/go-rewards-app/go-rewards-app-1.jpeg",
       "/projects/go-rewards-app/go-rewards-app-2.jpeg",
       "/projects/go-rewards-app/go-rewards-app-3.jpeg",
+      "/projects/go-rewards-app/go-rewards-app-4.jpeg",
+      "/projects/go-rewards-app/go-rewards-app-5.jpeg",
     ],
     tags: [
       "React Native",
@@ -205,6 +171,7 @@ export const projects: Project[] = [
       "AWS CloudFormation",
       "EagleEye",
       "Jest",
+      "CI/CD",
     ],
   },
   {
@@ -218,6 +185,8 @@ export const projects: Project[] = [
       "/projects/go-rewards-web/go-rewards-web-1.jpeg",
       "/projects/go-rewards-web/go-rewards-web-2.jpeg",
       "/projects/go-rewards-web/go-rewards-web-3.jpeg",
+      "/projects/go-rewards-web/go-rewards-web-4.jpeg",
+      "/projects/go-rewards-web/go-rewards-web-5.jpeg",
     ],
     tags: [
       "React",
@@ -236,6 +205,7 @@ export const projects: Project[] = [
       "AWS DynamoDB",
       "AWS CloudFormation",
       "EagleEye",
+      "CI/CD",
     ],
   },
   {
@@ -251,6 +221,9 @@ export const projects: Project[] = [
       "/projects/my-slyp/my-slyp-3.jpeg",
       "/projects/my-slyp/my-slyp-4.jpeg",
       "/projects/my-slyp/my-slyp-5.jpeg",
+      "/projects/my-slyp/my-slyp-6.jpeg",
+      "/projects/my-slyp/my-slyp-7.jpeg",
+      "/projects/my-slyp/my-slyp-8.jpeg",
     ],
     tags: [
       "Angular",
@@ -263,6 +236,7 @@ export const projects: Project[] = [
       "AWS S3",
       "AWS DynamoDB",
       "AWS CloudFormation",
+      "CI/CD",
     ],
   },
   {
@@ -298,14 +272,17 @@ export const projects: Project[] = [
       "Redux Toolkit",
       "Vite",
       "Cypress",
+      "Vitest",
       "Node.js",
       "PostgreSQL",
       "AWS S3",
       "AWS DynamoDB",
       "AWS CloudFormation",
+      "AWS Cognito",
       "Amazon QuickSight",
       "Paragon",
       "EagleEye",
+      "CI/CD",
     ],
   },
   {
@@ -327,9 +304,15 @@ export const projects: Project[] = [
       "AWS S3",
       "AWS DynamoDB",
       "AWS CloudFormation",
+      "AWS SQS",
+      "AWS SNS",
+      "AWS RDS",
+      "Cypress",
+      "Jest",
       "Visa",
       "Mastercard",
       "Gr4vy",
+      "CI/CD",
     ],
   },
   {
@@ -345,7 +328,17 @@ export const projects: Project[] = [
       "/projects/theluxeweek/theluxeweek-5.jpeg",
       "/projects/theluxeweek/theluxeweek-6.jpeg",
     ],
-    tags: ["Strapi", "JavaScript", "TypeScript", "Stripe", "PostgreSQL"],
+    tags: [
+      "Strapi",
+      "JavaScript",
+      "TypeScript",
+      "Stripe",
+      "PostgreSQL",
+      "AWS Amplify",
+      "AWS ECS",
+      "AWS EKS",
+      "CI/CD",
+    ],
   },
   {
     name: "Juleb POS",
@@ -358,7 +351,19 @@ export const projects: Project[] = [
       "/projects/juleb/juleb-3.jpeg",
       "/projects/juleb/juleb-4.jpeg",
     ],
-    tags: ["React", "Redux Saga", "Node.js", "NestJS", "GraphQL", "TypeScript"],
+    tags: [
+      "React",
+      "Redux Saga",
+      "Node.js",
+      "NestJS",
+      "GraphQL",
+      "TypeScript",
+      "Styled Components",
+      "Apollo Client",
+      "CI/CD",
+      "Docker",
+      "Kubernetes",
+    ],
   },
   {
     name: "VGAS",
@@ -374,6 +379,7 @@ export const projects: Project[] = [
       "CodeIgniter 3",
       "SQL Server",
       "MySQL",
+      "REST API",
     ],
   },
   {
@@ -388,6 +394,7 @@ export const projects: Project[] = [
       "Node.js",
       "Express",
       "MySQL",
+      "REST API",
     ],
   },
   {
@@ -405,3 +412,231 @@ export const projects: Project[] = [
     ],
   },
 ];
+
+// Skills are derived from project tags, so new projects automatically surface their stack here.
+// `additionalSkills` covers curated ordering plus skills not demonstrated by any project tag.
+type SkillCategory =
+  | "Programming Languages"
+  | "Frameworks & Runtimes"
+  | "UI Libraries & Styling"
+  | "State Management & Data Fetching"
+  | "Databases"
+  | "Cloud & DevOps"
+  | "Version Control"
+  | "Testing"
+  | "Tools & Practices"
+  | "Personal Learning & Side Projects";
+
+const skillCategoryOrder: SkillCategory[] = [
+  "Programming Languages",
+  "Frameworks & Runtimes",
+  "UI Libraries & Styling",
+  "State Management & Data Fetching",
+  "Databases",
+  "Cloud & DevOps",
+  "Version Control",
+  "Testing",
+  "Tools & Practices",
+  "Personal Learning & Side Projects",
+];
+
+// Maps every tag used across `projects` to the Skills section category it belongs to.
+const tagSkillCategories: Record<string, SkillCategory> = {
+  TypeScript: "Programming Languages",
+  JavaScript: "Programming Languages",
+  PHP: "Programming Languages",
+
+  React: "Frameworks & Runtimes",
+  "React Native": "Frameworks & Runtimes",
+  Angular: "Frameworks & Runtimes",
+  AngularJS: "Frameworks & Runtimes",
+  Vite: "Frameworks & Runtimes",
+  jQuery: "Frameworks & Runtimes",
+  "Node.js": "Frameworks & Runtimes",
+  Express: "Frameworks & Runtimes",
+  NestJS: "Frameworks & Runtimes",
+  "CodeIgniter 3": "Frameworks & Runtimes",
+  Strapi: "Frameworks & Runtimes",
+
+  "Tailwind CSS": "UI Libraries & Styling",
+  "Chakra UI": "UI Libraries & Styling",
+  "Styled Components": "UI Libraries & Styling",
+  Bootstrap: "UI Libraries & Styling",
+
+  "Redux Toolkit": "State Management & Data Fetching",
+  "Redux Saga": "State Management & Data Fetching",
+  NgRx: "State Management & Data Fetching",
+  "TanStack Query": "State Management & Data Fetching",
+  "TanStack Router": "State Management & Data Fetching",
+  "Context API": "State Management & Data Fetching",
+
+  PostgreSQL: "Databases",
+  MySQL: "Databases",
+  "SQL Server": "Databases",
+
+  "AWS Cognito": "Cloud & DevOps",
+  "AWS S3": "Cloud & DevOps",
+  "AWS DynamoDB": "Cloud & DevOps",
+  "AWS CloudFormation": "Cloud & DevOps",
+  "AWS SQS": "Cloud & DevOps",
+  "AWS SNS": "Cloud & DevOps",
+  "AWS RDS": "Cloud & DevOps",
+  "AWS Amplify": "Cloud & DevOps",
+  "AWS ECS": "Cloud & DevOps",
+  "AWS EKS": "Cloud & DevOps",
+  "Amazon QuickSight": "Cloud & DevOps",
+  Docker: "Cloud & DevOps",
+  Kubernetes: "Cloud & DevOps",
+  "CI/CD": "Cloud & DevOps",
+
+  GitHub: "Version Control",
+  GitLab: "Version Control",
+
+  Jest: "Testing",
+  Vitest: "Testing",
+  Cypress: "Testing",
+  Playwright: "Testing",
+
+  GraphQL: "Tools & Practices",
+  "Apollo Client": "Tools & Practices",
+  "REST API": "Tools & Practices",
+  EagleEye: "Tools & Practices",
+  Gr4vy: "Tools & Practices",
+  Paragon: "Tools & Practices",
+  Stripe: "Tools & Practices",
+  Contentful: "Tools & Practices",
+  Visa: "Tools & Practices",
+  Mastercard: "Tools & Practices",
+  AJAX: "Tools & Practices",
+};
+
+// Curated ordering, plus skills not demonstrated by any project tag (e.g. Next.js, MongoDB).
+const additionalSkills: Partial<Record<SkillCategory, string[]>> = {
+  "Programming Languages": ["TypeScript", "JavaScript", "HTML/CSS", "PHP"],
+  "Frameworks & Runtimes": [
+    "React",
+    "React Native",
+    "Next.js",
+    "Angular",
+    "AngularJS",
+    "Vite",
+    "jQuery",
+    "Node.js",
+    "Express",
+    "NestJS",
+    "CodeIgniter 3",
+    "Strapi",
+  ],
+  "UI Libraries & Styling": [
+    "Tailwind CSS",
+    "Chakra UI",
+    "Styled Components",
+    "Bootstrap",
+  ],
+  "State Management & Data Fetching": [
+    "Redux Toolkit",
+    "Redux Saga",
+    "NgRx",
+    "TanStack Query",
+    "TanStack Router",
+    "Context API",
+  ],
+  Databases: ["MySQL", "PostgreSQL", "SQL Server", "MongoDB", "TypeORM"],
+  "Cloud & DevOps": [
+    "AWS Cognito",
+    "AWS S3",
+    "AWS DynamoDB",
+    "AWS SQS",
+    "AWS SNS",
+    "AWS RDS",
+    "AWS CloudFormation",
+    "AWS Amplify",
+    "AWS ECS",
+    "AWS EKS",
+    "AWS WAF",
+    "Amazon QuickSight",
+    "Docker",
+    "Kubernetes",
+    "Terraform",
+    "CI/CD",
+  ],
+  "Version Control": ["Git", "GitHub", "GitLab"],
+  Testing: ["Jest", "Vitest", "Cypress", "React Testing Library", "Playwright"],
+  "Tools & Practices": [
+    "GraphQL",
+    "Apollo Client",
+    "REST API",
+    "EagleEye",
+    "Gr4vy",
+    "Paragon",
+    "Stripe",
+    "Contentful",
+    "Visa",
+    "Mastercard",
+    "AJAX",
+    "PostHog",
+    "Figma",
+    "Jira",
+    "Confluence",
+    "Agile",
+    "Scrum",
+    "OOP",
+    "Design Patterns",
+    "SOLID Principles",
+    "Clean Code",
+    "Code Review",
+    "Problem Solving",
+    "Claude",
+    "Claude Code",
+    "GitHub Copilot",
+    "AI-assisted development",
+  ],
+  // Self-taught / hobby skills, not tied to any professional project.
+  "Personal Learning & Side Projects": [
+    "Dart",
+    "Flutter",
+    "Python",
+    "Django",
+    "Ruby",
+    "Ruby on Rails",
+    "Go",
+    "gRPC",
+    "Kotlin",
+    "Spring Boot",
+    "Web Application Security",
+    "Penetration Testing",
+    "Social Engineering",
+    "Kali Linux",
+  ],
+};
+
+function buildSkills(): Record<SkillCategory, string[]> {
+  const grouped = new Map<SkillCategory, Set<string>>();
+  const add = (category: SkillCategory, skill: string) => {
+    if (!grouped.has(category)) grouped.set(category, new Set());
+    grouped.get(category)!.add(skill);
+  };
+
+  for (const [category, skillList] of Object.entries(additionalSkills) as [
+    SkillCategory,
+    string[],
+  ][]) {
+    skillList.forEach((skill) => add(category, skill));
+  }
+
+  for (const project of projects) {
+    for (const tag of project.tags) {
+      const category = tagSkillCategories[tag];
+      if (category) add(category, tag);
+    }
+  }
+
+  const result = {} as Record<SkillCategory, string[]>;
+  for (const category of skillCategoryOrder) {
+    const skillSet = grouped.get(category);
+    if (skillSet) result[category] = Array.from(skillSet);
+  }
+  return result;
+}
+
+export const skills = buildSkills();

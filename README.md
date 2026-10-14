@@ -89,6 +89,22 @@ Almost everything you'll ever need to change lives in one file:
 projects. Components under `src/components/` just render this data; you
 shouldn't need to touch component code to update text.
 
+For the detailed, step-by-step rules (adding a job/project, image ordering,
+tag vs. skill conventions, naming conventions), see [HOWTO.md](./HOWTO.md).
+
+### Skills
+
+The Skills section is mostly derived automatically from `projects[].tags`,
+not hand-maintained:
+
+- `tagSkillCategories` maps every tag used across `projects` to the category
+  it should appear under. When you add a brand-new tag to a project, add a
+  one-line entry here too so it's categorized correctly.
+- `additionalSkills` controls display order and adds skills not demonstrated
+  by any project (e.g. `Next.js`, personal/side-project tech).
+- `buildSkills()` merges the two into the exported `skills` object — don't
+  edit `skills` directly, it's computed.
+
 ### Adding/editing a project
 
 Each entry in the `projects` array (in `content.ts`) supports:
