@@ -425,7 +425,8 @@ type SkillCategory =
   | "Version Control"
   | "Testing"
   | "Tools & Practices"
-  | "Personal Learning & Side Projects";
+  | "Personal Learning & Side Projects"
+  | "Operating Systems";
 
 const skillCategoryOrder: SkillCategory[] = [
   "Programming Languages",
@@ -438,6 +439,7 @@ const skillCategoryOrder: SkillCategory[] = [
   "Testing",
   "Tools & Practices",
   "Personal Learning & Side Projects",
+  "Operating Systems",
 ];
 
 // Maps every tag used across `projects` to the Skills section category it belongs to.
@@ -540,8 +542,18 @@ const additionalSkills: Partial<Record<SkillCategory, string[]>> = {
     "TanStack Query",
     "TanStack Router",
     "Context API",
+    "React Navigation",
+    "Formik",
   ],
-  Databases: ["MySQL", "PostgreSQL", "SQL Server", "MongoDB", "TypeORM"],
+  Databases: [
+    "MySQL",
+    "PostgreSQL",
+    "SQL Server",
+    "MongoDB",
+    "TypeORM",
+    "Sequelize",
+    "Mongoose",
+  ],
   "Cloud & DevOps": [
     "AWS Cognito",
     "AWS S3",
@@ -608,6 +620,7 @@ const additionalSkills: Partial<Record<SkillCategory, string[]>> = {
     "Social Engineering",
     "Kali Linux",
   ],
+  "Operating Systems": ["Windows", "Linux", "macOS"],
 };
 
 function buildSkills(): Record<SkillCategory, string[]> {
