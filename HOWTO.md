@@ -116,6 +116,16 @@ If a skill is genuinely demonstrated by a shipped project, prefer adding it
 via a project tag + `tagSkillCategories` entry (so it's "proven") over just
 adding it to `additionalSkills`.
 
+### Adding a brand-new category
+
+To add a category that doesn't exist yet (e.g. "Operating Systems"), you
+need to touch three spots in `content.ts`:
+
+1. Add the category name to the `SkillCategory` union type.
+2. Add it to `skillCategoryOrder` (controls where it renders on the page).
+3. Add its skills to `additionalSkills` (or map project tags to it via
+   `tagSkillCategories`, if applicable).
+
 ### "Personal Learning & Side Projects" category
 
 Use this category for self-taught/hobby skills you haven't used
