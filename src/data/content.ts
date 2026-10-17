@@ -141,6 +141,8 @@ export type Project = {
   tags: string[];
   link?: string;
   images?: string[];
+  // Not publicly launched yet; still contributes to Skills but isn't rendered as a card.
+  hidden?: boolean;
 };
 
 export const projects: Project[] = [
@@ -282,6 +284,65 @@ export const projects: Project[] = [
       "Amazon QuickSight",
       "Paragon",
       "EagleEye",
+      "CI/CD",
+    ],
+  },
+  {
+    name: "MySlyp V3",
+    description:
+      "Redesigned version of the merchant portal — new Figma-based theme, improved Cognito-based sign-in/logout flow, and a merchant recommendations feature, built on the same GraphQL-powered platform as MySlyp v2.",
+    frontend: ["my-slyp-v2"],
+    backend: [
+      "bff-my-slyp",
+      "api",
+      "service-rewards",
+      "service-merchant-users",
+    ],
+    link: "https://my-v3.slyp.com.au/",
+    hidden: true,
+    images: [
+      "/projects/my-slyp-v3/my-slyp-v3-1.jpeg",
+      "/projects/my-slyp-v3/my-slyp-v3-2.jpeg",
+      "/projects/my-slyp-v3/my-slyp-v3-3.jpeg",
+      "/projects/my-slyp-v3/my-slyp-v3-4.jpeg",
+      "/projects/my-slyp-v3/my-slyp-v3-5.jpeg",
+      "/projects/my-slyp-v3/my-slyp-v3-6.jpeg",
+      "/projects/my-slyp-v3/my-slyp-v3-7.jpeg",
+      "/projects/my-slyp-v3/my-slyp-v3-8.jpeg",
+      "/projects/my-slyp-v3/my-slyp-v3-9.jpeg",
+      "/projects/my-slyp-v3/my-slyp-v3-10.jpeg",
+      "/projects/my-slyp-v3/my-slyp-v3-11.jpeg",
+      "/projects/my-slyp-v3/my-slyp-v3-12.jpeg",
+      "/projects/my-slyp-v3/my-slyp-v3-13.jpeg",
+      "/projects/my-slyp-v3/my-slyp-v3-14.jpeg",
+      "/projects/my-slyp-v3/my-slyp-v3-15.jpeg",
+      "/projects/my-slyp-v3/my-slyp-v3-16.jpeg",
+      "/projects/my-slyp-v3/my-slyp-v3-17.jpeg",
+      "/projects/my-slyp-v3/my-slyp-v3-18.jpeg",
+      "/projects/my-slyp-v3/my-slyp-v3-19.jpeg",
+      "/projects/my-slyp-v3/my-slyp-v3-20.jpeg",
+      "/projects/my-slyp-v3/my-slyp-v3-21.jpeg",
+      "/projects/my-slyp-v3/my-slyp-v3-22.jpeg",
+    ],
+    tags: [
+      "React",
+      "TypeScript",
+      "Apollo Client",
+      "GraphQL",
+      "Chakra UI",
+      "Redux Toolkit",
+      "Vite",
+      "Cypress",
+      "Vitest",
+      "Node.js",
+      "PostgreSQL",
+      "AWS S3",
+      "AWS Cognito",
+      "AWS Amplify",
+      "Amazon QuickSight",
+      "Paragon",
+      "EagleEye",
+      "AWS AI-DLC",
       "CI/CD",
     ],
   },
@@ -510,6 +571,7 @@ const tagSkillCategories: Record<string, SkillCategory> = {
   Visa: "Tools & Practices",
   Mastercard: "Tools & Practices",
   AJAX: "Tools & Practices",
+  "AWS AI-DLC": "Tools & Practices",
 };
 
 // Curated ordering, plus skills not demonstrated by any project tag (e.g. Next.js, MongoDB).
